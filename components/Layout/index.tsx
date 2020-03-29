@@ -13,7 +13,6 @@ const MyLayout = ({ children }) => {
                 <Menu
                     theme="dark"
                     mode="horizontal"
-                    defaultSelectedKeys={['1']}
                 >
                     <Menu.Item key="1">
                         <Link href="/">
