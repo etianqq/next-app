@@ -7,13 +7,13 @@ import './index.css'
 const MyLayout = ({ children }) => {
 
     return (
-        <Layout className="layout">
+        <Layout>
             <Header>
-                <div className="logo">Next APP</div>
+                <div className="layout-logo">Next APP</div>
                 <Menu
                     theme="dark"
                     mode="horizontal"
-                    defaultSelectedKeys={['2']}
+                    defaultSelectedKeys={['1']}
                 >
                     <Menu.Item key="1">
                         <Link href="/">
@@ -26,10 +26,8 @@ const MyLayout = ({ children }) => {
                     </Menu.Item>
                 </Menu>
             </Header>
-            <Content style={{ padding: '0 50px' }}>
-                <div className="site-layout-content">
-                    {children}
-                </div>
+            <Content className='layout-container'>
+                {children}
             </Content>
             <Footer style={{ textAlign: 'center' }}>A next demo</Footer>
         </Layout>
