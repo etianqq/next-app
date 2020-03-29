@@ -1,9 +1,10 @@
 import React from 'react'
-
-function Item() {
+import { withRouter } from 'next/router'
+function Item(props) {
+    const { router } = props;
     return (
-      <p>This is item</p>
+        <p>This is item {router.query.id}</p>
     )
-  }
-  
-  export default Item
+}
+
+export default withRouter(Item)
