@@ -1,9 +1,11 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 import Layout from '../components/Layout'
+import { Provider } from 'react-redux'
+import withReduxStore from '../lib/with-redux-store'
 import '../styles/index.scss'
 
-export default class MyApp extends App {
+class MyApp extends App {
 
     componentDidCatch(error, errorInfo) {
         console.log('CUSTOM ERROR HANDLING', error)
@@ -11,12 +13,16 @@ export default class MyApp extends App {
     }
 
     render() {
-        const { Component, pageProps } = this.props
+        const { Component, pageProps, reduxStore } = this.props
         return (
             <Container>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
+                <Provider store={reduxStore}>
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                </Provider>
             </Container>)
     }
 }
+
+export default withReduxStore(MyApp)

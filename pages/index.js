@@ -1,8 +1,30 @@
-import { Button } from 'antd'
+import React from 'react'
+import {connect} from 'react-redux'
+import {startClock, serverRenderClock} from '../models/home'
+import Home from '../components/pages/Home'
 
-const Home = () => {
+class Index extends React.Component {
+  static getInitialProps ({ reduxStore, req }) {
+    const isServer = !!req
+    reduxStore.dispatch(serverRenderClock(isServer))
 
-  return (<Button>test</Button>)
+    return {}
+  }
+
+  componentDidMount () {
+    const {dispatch} = this.props
+    this.timer = startClock(dispatch)
+  }
+
+  componentWillUnmount () {
+    clearInterval(this.timer)
+  }
+
+  render () {
+    return (
+      <Home />
+    )
+  }
 }
 
-export default Home
+export default connect()(Index)
