@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import {Button} from 'antd'
 const Home = () => (
   <div className="container">
     <Head>
@@ -9,6 +9,7 @@ const Home = () => (
     </Head>
 
     <main>
+      <Button>test</Button>
       <ul>
         <li>
           <Link href="/">
