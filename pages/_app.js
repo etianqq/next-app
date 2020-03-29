@@ -4,6 +4,12 @@ import Layout from '../components/Layout'
 import '../styles/index.css'
 
 export default class MyApp extends App {
+
+    componentDidCatch(error, errorInfo) {
+        console.log('CUSTOM ERROR HANDLING', error)
+        super.componentDidCatch(error, errorInfo)
+    }
+
     render() {
         const { Component, pageProps } = this.props
         return (
