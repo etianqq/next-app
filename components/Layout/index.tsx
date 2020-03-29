@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout, Menu } from 'antd';
 const { Header, Content, Footer } = Layout;
 import Link from 'next/link'
-import './index.css'
+import './index.scss'
 
 const MyLayout = ({ children }) => {
 

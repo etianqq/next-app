@@ -1,9 +1,12 @@
 .layout-logo {
-    width: 120px;
+    width: 134px;
     height: 100%;
     float: left;
     color: #fff;
     font-size: 16px;
+    background: url(/static/img/logo.jpg) no-repeat 0 center;
+    background-size: auto 50px;
+    padding-left: 60px;
 }
 
 .layout-container {
