@@ -1,5 +1,5 @@
 import React from 'react'
-import { Checkbox, Button } from 'antd';
+import { Checkbox } from 'antd';
 import { LinkOutlined } from '@ant-design/icons'
 import { withRouter } from 'next/router'
 
@@ -13,7 +13,6 @@ interface IProps {
 
 const Todo = (props: IProps) => {
     const { onClick, completed, text, id, router } = props;
-    debugger
     function goToDetail() {
         router.push(`/list/${id}`)
     }
