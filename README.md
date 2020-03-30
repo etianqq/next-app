@@ -1,4 +1,4 @@
-通过`create-next-app`脚手架创建的next.js项目，集成了`react-redux`，并支持`scss`
+通过`create-next-app`脚手架创建的next.js项目，集成了`react-redux`，`antd`，并支持`scss`
 
 ## 运行
 
